@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="temperatureConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qhn-CX-Z8H">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Night" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-fV-EKS">
+                                <rect key="frame" x="44" y="-44" width="808" height="471"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-qt-mBN">
+                                <rect key="frame" x="406" y="242" width="84" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-Et-g60">
+                                <rect key="frame" x="326.66666666666669" y="192" width="243.00000000000006" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="ZFr-K9-56Y"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="PnD-Fp-aKn"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dym-fo-1rI">
+                                <rect key="frame" x="414.66666666666669" y="124" width="67" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I5-0w-PvG">
+                                <rect key="frame" x="327" y="50" width="242" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="Ham-Bc-1vZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I0C-cK-y4h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YPZ-Et-g60" firstAttribute="top" secondItem="dym-fo-1rI" secondAttribute="bottom" constant="20" id="4YD-gK-CqY"/>
+                            <constraint firstItem="xxk-fV-EKS" firstAttribute="leading" secondItem="I0C-cK-y4h" secondAttribute="leading" id="5DA-p1-aCR"/>
+                            <constraint firstItem="dym-fo-1rI" firstAttribute="centerX" secondItem="I0C-cK-y4h" secondAttribute="centerX" id="9uq-rI-Vke"/>
+                            <constraint firstItem="xxk-fV-EKS" firstAttribute="bottom" secondItem="I0C-cK-y4h" secondAttribute="bottom" constant="34" id="GcY-Ta-Enu"/>
+                            <constraint firstItem="I0C-cK-y4h" firstAttribute="trailing" secondItem="xxk-fV-EKS" secondAttribute="trailing" id="TSn-Ye-i4e"/>
+                            <constraint firstItem="YPZ-Et-g60" firstAttribute="centerY" secondItem="qhn-CX-Z8H" secondAttribute="centerY" id="bwq-eb-0PK"/>
+                            <constraint firstItem="0I5-0w-PvG" firstAttribute="centerX" secondItem="I0C-cK-y4h" secondAttribute="centerX" id="gLs-mt-qeS"/>
+                            <constraint firstItem="I0C-cK-y4h" firstAttribute="top" secondItem="xxk-fV-EKS" secondAttribute="top" constant="44" id="gXs-w5-yoF"/>
+                            <constraint firstItem="YPZ-Et-g60" firstAttribute="centerX" secondItem="qhn-CX-Z8H" secondAttribute="centerX" id="jPB-eK-ncu"/>
+                            <constraint firstItem="FP4-qt-mBN" firstAttribute="centerX" secondItem="I0C-cK-y4h" secondAttribute="centerX" id="kOq-AX-RKw"/>
+                            <constraint firstItem="FP4-qt-mBN" firstAttribute="top" secondItem="YPZ-Et-g60" secondAttribute="bottom" constant="20" id="oJm-by-i3s"/>
+                            <constraint firstItem="dym-fo-1rI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0I5-0w-PvG" secondAttribute="bottom" constant="2" id="prz-ZW-GWj"/>
+                            <constraint firstItem="0I5-0w-PvG" firstAttribute="top" secondItem="I0C-cK-y4h" secondAttribute="top" constant="50" id="xSs-TG-qei"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiumLabel" destination="dym-fo-1rI" id="Wad-pq-NVv"/>
+                        <outlet property="fahrengeitLabel" destination="FP4-qt-mBN" id="lFm-Ld-E3T"/>
+                        <outlet property="sliderLabel" destination="YPZ-Et-g60" id="mlR-Ms-eqC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.151785714285715" y="95.652173913043484"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Night" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
